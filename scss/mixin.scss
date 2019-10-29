@@ -1,0 +1,17 @@
+@mixin header_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin button_style{
+    background-color: $button-color;
+    color:$main-text-color;
+    font-size: 15px;
+    padding:15px 20px 15px 20px;
+    border:0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}

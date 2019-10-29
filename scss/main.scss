@@ -1,53 +1,136 @@
 @import './variables.scss';
 @import './mixin.scss';
-body{
+
+body {
     font-family: 'Noto Sans KR', sans-serif;
 }
-#container{
-   width: 100%;
-   height: 100%;
-   max-width:$container-width;
-   margin-left: auto;
-   margin-right: auto;
-}
-.header-container{
-    background-image:url('../img/Livello_1.png');
-    @include header_container;
-  .header-menu{
-      display: flex;
-      align-items: center;
-      margin-top:50px;
-    li {
-        list-style-type: none;
-        padding:0px 60px 0px 60px;
-    }
-    li > a{
-        text-decoration: none;
-        font-size:20px;
-        color:$main-text-color;
-    }
-  }
-  .header-description{
-      @include header_container;
-      margin-top:230px;
-      .header-title{
-          color:$main-text-color;
-          text-transform: uppercase;
-          letter-spacing: $letter-space;
-      }
 
-      .header-subtitle{
-          color:$main-text-color;
-          letter-spacing: 0.1em;
-          text-align: center;
-          margin:15px 0px 15px 0px;
-      }
-      .header-description__button{
-        @include button_style;
-        margin-bottom: 185px;
-      }
-      .header-icons{
-         padding-top:80px;
-      }
-  }
+#container {
+    width: 100%;
+    height: 100%;
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    background-image: url('../img/Livello_1.png');
+    @include header_container;
+
+    .header-menu {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+
+        li {
+            list-style-type: none;
+            padding: 0px 60px 0px 60px;
+        }
+
+        li>a {
+            text-decoration: none;
+            font-size: 20px;
+            color: $main-text-color;
+        }
+    }
+
+    .header-description {
+        @include header_container;
+        margin-top: 230px;
+
+        .header-title {
+            color: $main-text-color;
+            text-transform: uppercase;
+            letter-spacing: $letter-space;
+        }
+
+        .header-subtitle {
+            color: $main-text-color;
+            letter-spacing: 0.1em;
+            text-align: center;
+            margin: 15px 0px 15px 0px;
+        }
+
+        .header-description__button {
+            @include button_style;
+            margin-bottom: 185px;
+        }
+
+        .header-icons {
+            padding-top: 80px;
+        }
+    }
+}
+
+.article-container {
+    width: 100%;
+    height: 100%;
+    max-width: $container-width;
+    background-color: #f5f6f7;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+
+    .article-description {
+        .article-description__title {
+            width: 280px;
+            height: 35px;
+            color: $button-color;
+            margin: 113px 0px 49px 0px;
+            text-transform: uppercase;
+        }
+
+        .article-description__subtitle {
+            width: 428px;
+            color: #373737;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 29px;
+            margin-bottom: 47px;
+
+        }
+
+        .article-info__button {
+            @include button_style;
+            margin-bottom: 92px;
+        }
+    }
+
+    .article-photo > img {
+        position: relative;
+        z-index: 1;
+        margin-top: 98px;
+        width: 700px;
+    }
+}
+.design-container{
+    position: relative;
+    z-index: 2;
+    bottom:-540px;
+    background-color: #ffff;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    .design-description{
+        width: 30%;
+        text-align: left;
+
+        .design-description__title{
+            margin:130px 0px 44px 0px;
+        }
+        .design-description__subtitle{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+        .design-button{
+            @include button_style;
+            margin-top:42px;
+        }
+    }
+    .design-photo > img{
+        position: relative;
+        margin-top:149px;
+    }
 }
